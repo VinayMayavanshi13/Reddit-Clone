@@ -4,13 +4,24 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../chakra/theme";
 import Layout from "../components/Layout/Layout";
 
+// type MyApp = {
+//   children: React.ReactNode;
+// }
+
+// const Layout = (props: LayoutProps) => {
+//   return (
+//     <div>
+//       {props.children}
+//     </div>
+//   );
+// }
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Layout>
-            <Component {...pageProps} />
-      </Layout>    
+        <Component {...pageProps} />
+      </Layout>   
     </ChakraProvider>
   );
 }
